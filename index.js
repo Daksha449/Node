@@ -16,6 +16,7 @@ const server = http.createServer((req,res)=>{
             res.end(content);
         });
     }else if(req.url === '/api'){
+        res.setHeader("Access-Control-Allow-Origin","*");
         res.writeHead(200,{'Content-Type':'application/json'});
         res.end(data);        
     }else{
@@ -48,7 +49,7 @@ var config = {
             
 axios(config)
     .then(function (response) {
-        data = (JSON.stringify(response.data));
+        data =(JSON.stringify(response.data));
     })
     .catch(function (error) {
         console.log(error);
