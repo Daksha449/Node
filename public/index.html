@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .grid {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-areas:
+    "nav nav nav nav"
+    "zerosection zerosection zerosection zerosection"
+    "firstsection firstsection firstsection firstsection"
+    "secondsection secondsection secondsection secondsection"
+    " thirdsection thirdsection thirdsection thirdsection "
+    "fourthsection fourthsection fourthsection fourthsection "
+    "footer footer footer footer";
+  grid-gap: 0.5rem;
+}
+
+ul {
+  grid-area: nav;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+li a {
+  grid-area: nav;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 113px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+#box1 {
+  height: 200px;
+  width: 20%;
+  display: inline-block;
+  float: left;
+}
+#box2 {
+  height: 200px;
+  width: 80%;
+  background-color: paleturquoise;
+  display: inline-block;
+  text-align: center;
+}
+.zerosection {
+  grid-area: zerosection;
+  background-color: white;
+  height: 200px;
+}
+.firstsection {
+  grid-area: firstsection;
+  background-color: #b7d7e8;
+  height: 200px;
+}
+.secondsection {
+  grid-area: secondsection;
+  background-color: white;
+  height: 200px;
+}
+.thirdsection {
+  grid-area: thirdsection;
+  background-color: #daebe8;
+  height: 200px;
+}
+.fourthsection {
+  grid-area: fourthsection;
+  background-color: lightblue;
+  height: 200px;
+}
+article {
+  display: inline-block;
+  height: 200px;
+  width: 49%;
+  background-color: skyblue;
+  margin: 6px;
+  text-align: center;
+}
+footer {
+  grid-area: footer;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 295px;
+  text-decoration: none;
+}
+/*Mobile layout*/
+@media only screen and(max-width:500px) {
+  .container {
+    grid-template-areas:
+      "nav"
+      "zerosection"
+      "firstsection"
+      "secondsection"
+      "thirdsection"
+      "fourthsection"
+      "footer";
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <nav>
+        <ul>
+        <li><a class="active" href="#Education">Education</a></li>
+        <li><a href="#Project" class="menu">Projects</a></li>
+        <li><a href="#Experience" class="menu">Experience</a></li>
+        <li><a href="#blogs" class="menu">Blogs</a></li>
+        <li><a href="#social" class="menu">Social</a></li>
+      </ul>
+    </nav>
+        <section class="zerosection">
+        <div id="box1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVKsJ1NDyPehlra4SyrzWYJaNh8mbcC91sXQ&usqp=CAU"/>
+      </div>
+        <div id="box2">
+          <h1>CHAVA DAKSHA CHOWDARY</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            venenatis est quis tortor iaculis feugiat. Proin mollis tellus et
+            pellentesque vehicula.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+       <section class="firstsection">
+            <h1 id="Education">Education</h1>
+            <p>
+              Phasellus non commodo nunc. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin venenatis
+              ipsum nec diam pretium, sed mattis leo sodales.
+            </p>
+      </section>
+      <section class="secondsection">
+        <article>
+          <h1 id="Project">Project-1</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id
+            quam at ipsum ullamcorper tempus et at nunc.
+          </p>
+        </article>
+        <article>
+          <h1 id="Project">Project-2</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            tristique ultricies tellus, at auctor dolor accumsan et.
+          </p>
+        </article>
+      </section>
+      <section class="thirdsection">
+        <h1 id="Experience">Experience</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+          fringilla sollicitudin arcu vulputate eleifend. Sed luctus arcu ut
+          turpis dapibus, ac viverra massa dignissim. Morbi eget imperdiet
+          arcu, non fermentum leo. Aliquam pharetra rutrum nulla in volutpat.
+          Fusce scelerisque orci quis pretium mattis.
+        </p>
+  </section>
+    <article>
+      <h1 id="blogs">Blog1</h1>
+      <p>
+        Praesent et augue finibus leo hendrerit gravida. Morbi elementum
+        convallis aliquet. Mauris nec molestie lacus. Orci varius natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Vivamus elementum elit a porttitor cursus.
+      </p>
+    </article>
+    <article>
+      <h1 id="blogs">Blog2</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+        sollicitudin, quam quis commodo laoreet, massa magna pellentesque
+        lectus, sit amet finibus enim elit quis risus. Fusce varius sagittis
+        mollis. Curabitur vel semper augue, in condimentum ante.
+      </p>
+    </article>
+    <footer>
+      <ul>
+        <li><a id="social" href="#twitter">Twitter</a></li>
+        <li><a id="social" href="#Linkedin">Linkedin</a></li>
+        <li><a id="social" href="#Github">Github</a></li>
+      </ul>
+    </footer>
+  </div>
+  </body>
